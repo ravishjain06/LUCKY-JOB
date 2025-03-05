@@ -37,7 +37,7 @@ const PostJob = () => {
         console.log(companyId);
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:5555/api/v1/job/postjob', {
+            const res = await axios.post('lucky-job.vercel.app/api/v1/job/postjob', {
                 title,
                 salary,
                 description,
