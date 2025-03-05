@@ -10,7 +10,7 @@ const useGetAllAdminJobs = () => {
     useEffect(() => {
         const fetchAllAdminJobs = async () => {
             try {
-                const res = await axios.get("http://localhost:5555/api/v1/job/getadminjobs", { withCredentials: true })
+                const res = await axios.get("lucky-job.vercel.app/api/v1/job/getadminjobs", { withCredentials: true })
                 if (res.data.success) {
                     // console.log(res.data.jobs);
                     dispatch(setAdminJobs(res.data.jobs))
