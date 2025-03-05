@@ -11,7 +11,7 @@ const useGetAllAppliedJobs = () => {
     useEffect(() => {
         const fetchAllAppliedJobs = async () => {
             try {
-                const res = await axios.get("http://localhost:5555/api/v1/application/getappliedjobs", { withCredentials: true })
+                const res = await axios.get("lucky-job.vercel.app/api/v1/application/getappliedjobs", { withCredentials: true })
                 if (res.data.success) {
                     
                     dispatch(setAppliedJobs(res.data.application))
