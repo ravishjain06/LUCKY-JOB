@@ -15,7 +15,7 @@ const useGetAllBrowseJob = () => {
         const fetchAllJobs = async () => {
 
             try {
-                const res = await axios.get(`http://localhost:5555/api/v1/job/getalljobs?keyword=${searchQuery}`, { withCredentials: true })
+                const res = await axios.get(`lucky-job.vercel.app/api/v1/job/getalljobs?keyword=${searchQuery}`, { withCredentials: true })
                 if (res.data.success) {
                     // console.log("Broweser jobs");
                     dispatch(setAllJobs(res.data.jobs))
