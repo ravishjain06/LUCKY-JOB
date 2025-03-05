@@ -19,7 +19,7 @@ const Navbar = () => {
 
     const logoutHandler = async () => {
         try {
-            const res = await axios.post('http://localhost:5555/api/v1/user/logout', {}, {
+            const res = await axios.post('lucky-job.vercel.app/api/v1/user/logout', {}, {
                 headers: {
                     'Content-Type': "application/json"
                 }, withCredentials: true
