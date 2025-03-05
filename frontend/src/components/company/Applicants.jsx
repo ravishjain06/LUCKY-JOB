@@ -20,7 +20,7 @@ const Applicants = () => {
             console.log(companyId);
 
             try {
-                const res = await axios.get(`http://localhost:5555/api/v1/application/getapplicants/${companyId}`, {
+                const res = await axios.get(`lucky-job.vercel.app/api/v1/application/getapplicants/${companyId}`, {
                     withCredentials: true
                 })
                 if (res.data.success) {
