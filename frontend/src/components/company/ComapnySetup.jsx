@@ -20,7 +20,7 @@ const CompanySetup = () => {
         const fetchCompanyData = async () => {
             if (params?.id) {
                 try {
-                    const res = await axios.get(`http://localhost:5555/api/v1/company/getcompany/${params.id}`, {
+                    const res = await axios.get(`lucky-job.vercel.app/api/v1/company/getcompany/${params.id}`, {
                         withCredentials: true,
                     });
                     console.log(res.data);
@@ -47,7 +47,7 @@ const CompanySetup = () => {
         const formData = new FormData();
         formData.append('image', imageFile);
         try {
-            const res = await axios.post("http://localhost:5555/api/v1/user/imageUpload", formData, {
+            const res = await axios.post("lucky-job.vercel.app/api/v1/user/imageUpload", formData, {
                 headers: {
                     'Content-Type': "multipart/form-data",
                 },
