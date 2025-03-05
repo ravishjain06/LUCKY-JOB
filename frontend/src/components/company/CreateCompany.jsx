@@ -17,7 +17,7 @@ const CreateCompany = () => {
     const createCompany = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.post("http://localhost:5555/api/v1/company/registercompany", { companyName }, {
+            const res = await axios.post("lucky-job.vercel.app/api/v1/company/registercompany", { companyName }, {
                 headers: {
                     'Content-Type': "application/json"
                 },
