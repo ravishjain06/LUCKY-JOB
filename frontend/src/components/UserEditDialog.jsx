@@ -43,7 +43,7 @@ const UserEditDialog = ({ open, setOpen }) => {
         formData.append('image', imageFile)
 
         try {
-            const res = await axios.post("http://localhost:5555/api/v1/user/imageUpload", formData, {
+            const res = await axios.post("lucky-job.vercel.app/api/v1/user/imageUpload", formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
@@ -63,7 +63,7 @@ const UserEditDialog = ({ open, setOpen }) => {
             if (file) {
                 imageURl = await imageUpload(file)
             }
-            const res = await axios.post("http://localhost:5555/api/v1/user/edit/profile", {
+            const res = await axios.post("lucky-job.vercel.app/api/v1/user/edit/profile", {
                 fullname,
                 email,
                 phoneNumber,
