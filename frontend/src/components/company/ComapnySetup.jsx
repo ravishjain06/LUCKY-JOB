@@ -68,7 +68,7 @@ const CompanySetup = () => {
             } else {
                 imageUrl = logo; // Keep the existing logo if not updated.
             }
-            const res = await axios.post(`http://localhost:5555/api/v1/company/update/company/${params?.id}`, {
+            const res = await axios.post(`lucky-job.vercel.app/api/v1/company/update/company/${params?.id}`, {
                 companyName,
                 website,
                 location,
