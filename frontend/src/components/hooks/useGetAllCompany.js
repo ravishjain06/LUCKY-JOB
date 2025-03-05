@@ -13,7 +13,7 @@ const useGetAllCompany = () => {
     useEffect(() => {
         const fetchAllCompany = async () => {
             try {
-                const res = await axios.get("http://localhost:5555/api/v1/company/getcompany", { withCredentials: true })
+                const res = await axios.get("lucky-job.vercel.app/api/v1/company/getcompany", { withCredentials: true })
                 if (res.data.success) {
                     console.log(res.data);
                     dispatch(getAllCompany(res.data.company))
