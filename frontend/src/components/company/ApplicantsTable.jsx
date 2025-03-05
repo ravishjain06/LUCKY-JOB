@@ -18,7 +18,7 @@ const ApplicantsTable = () => {
   const statusHandler = async (status, id) => {
     try {
       const res = await axios.post(
-        `http://localhost:5555/api/v1/application/updatestatus/${id}`,
+        `lucky-job.vercel.app/api/v1/application/updatestatus/${id}`,
         { status },
         {
           headers: {
