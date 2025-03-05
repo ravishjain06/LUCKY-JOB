@@ -24,7 +24,7 @@ const SignUp = () => {
         formData.append('image', imageFile);      //image comes from backend
 
         try {
-            const res = await axios.post("http://localhost:5555/api/v1/user/imageUpload", formData, {
+            const res = await axios.post("lucky-job.vercel.app/api/v1/user/imageUpload", formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
@@ -46,7 +46,7 @@ const SignUp = () => {
                 imageURl = await uploadImage(profilePicture);
             }
 
-            const res = await axios.post("http://localhost:5555/api/v1/user/register", {
+            const res = await axios.post("lucky-job.vercel.app/api/v1/user/register", {
                 fullname,
                 email,
                 phoneNumber,
