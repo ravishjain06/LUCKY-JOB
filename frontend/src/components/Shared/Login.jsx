@@ -22,7 +22,7 @@ const Login = () => {
         e.preventDefault()
         console.log("Cliked");
         try {
-            const res = await axios.post("http://localhost:5555/api/v1/user/login", {
+            const res = await axios.post("lucky-job.vercel.app/api/v1/user/login", {
                 email,
                 password,
                 role
